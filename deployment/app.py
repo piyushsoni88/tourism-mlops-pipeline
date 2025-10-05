@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.title("🏖 Tourism Package Prediction")
+st.title(" Tourism Package Prediction")
 
 model = joblib.load("deployment/best_model.pkl")
 
@@ -17,4 +17,4 @@ df = pd.DataFrame([[age, income, passport, owncar]],
 
 if st.button("Predict"):
     pred = model.predict(df)[0]
-    st.write("✅ Will Purchase Package" if pred==1 else "❌ Will Not Purchase Package")
+    st.write(" Will Purchase Package" if pred==1 else " Will Not Purchase Package")
